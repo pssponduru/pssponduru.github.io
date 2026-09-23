@@ -1,3 +1,139 @@
 {
-  "works": []
+  "works": [
+    {
+      "key": "227141828",
+      "title": "Estimating Avoidable Harm for Test-Time Compute Allocation in Long-Horizon Tool-Using Language Agents: A Controlled Computational Study and External Validation Protocol",
+      "authors": "Prudvi Saisaran Ponduru, Pavani Priya Vyshnavi Nandanavanam, Sai Kesav Kumar Ponduru",
+      "venue": "Engineering and Technology Journal",
+      "year": "2026",
+      "doi": "",
+      "page": "orcid-5e9dbd2ed141.html"
+    },
+    {
+      "key": "227141802",
+      "title": "RACER: Remediation Assurance Contracts for Evidence-Gated, Risk-Bounded Autonomous Recovery in Cloud Systems",
+      "authors": "Prudvi Saisaran Ponduru, Pavani Priya Vyshnavi Nandanavanam, Sai Kesav Kumar Ponduru",
+      "venue": "International Journal of Advanced Multidisciplinary Research and Studies",
+      "year": "2026",
+      "doi": "",
+      "page": "orcid-113d0ba5ea82.html"
+    },
+    {
+      "key": "223750177",
+      "title": "AI-SAFE FlightNet : A Next-Generation Artificial Intelligence and Automation Framework for Predictive Flight Safety, Aircraft Health Intelligence, and Ground Operations Coordination",
+      "authors": "Prudvi Saisaran Ponduru, Pavani Priya Vyshnavi Nandanavanam, Sai Kesav Kumar Ponduru",
+      "venue": "Engineering and Technology Journal",
+      "year": "2026",
+      "doi": "",
+      "page": "orcid-2d0f8bd7e6ce.html"
+    },
+    {
+      "key": "223749832",
+      "title": "OpenReliOps: A Safety-Constrained Architecture for Autonomous Reliability in Open-Weight Model Services",
+      "authors": "Prudvi Saisaran Ponduru, Pavani Priya Vyshnavi Nandanavanam, Sai Kesav Kumar Ponduru",
+      "venue": "International Journal of Advanced Multidisciplinary Research and Studies",
+      "year": "2026",
+      "doi": "",
+      "page": "orcid-8b816d8643a0.html"
+    },
+    {
+      "key": "222870605",
+      "title": "SAFE-HealCloud: Safety-Aware, Agentic Self-Healing for Cloud Infrastructure",
+      "authors": "Prudvi Saisaran Ponduru, Pavani Priya Vyshnavi Nandanavanam, Sai Kesav Kumar Ponduru",
+      "venue": "International Journal of Scientific Research in Computer Science, Engineering and Information Technology",
+      "year": "2026",
+      "doi": "",
+      "page": "orcid-c8a9cd3eb455.html"
+    },
+    {
+      "key": "221843711",
+      "title": "A Unified Framework for Self-Evolving and Self-Healing Artificial Intelligence Agents",
+      "authors": "Prudvi Saisaran Ponduru",
+      "venue": "Advanced International Journal of Multidisciplinary Research",
+      "year": "2026",
+      "doi": "",
+      "page": "orcid-5b44efcdea19.html"
+    },
+    {
+      "key": "217649608",
+      "title": "Matter - AI A Multimodal AI Framework for Accelerated Materials Discovery in Physical Sciences",
+      "authors": "Prudvi Saisaran Ponduru",
+      "venue": "International Journal of Innovative Research in Engineering & Multidisciplinary Physical Sciences",
+      "year": "2026",
+      "doi": "",
+      "page": "orcid-89cf14a8fc6d.html"
+    },
+    {
+      "key": "217382074",
+      "title": "AI-Driven Adaptive Anomaly Detection and Control for IoT Cyber-Physical Systems",
+      "authors": "Prudvi Saisaran Ponduru",
+      "venue": "International Journal For Multidisciplinary Research",
+      "year": "2026",
+      "doi": "",
+      "page": "orcid-706d17c031b7.html"
+    },
+    {
+      "key": "218822096",
+      "title": "AgentMesh-MCP: A Secure and Governed Framework for Agentic AI Systems Using LLM Agents and Model Context Protocol Servers",
+      "authors": "Prudvi Saisaran Ponduru Prudvi Saisaran Ponduru",
+      "venue": "International Journal of Scientific Research in Engineering and Management",
+      "year": "2026",
+      "doi": "",
+      "page": "orcid-f5503de09afb.html"
+    },
+    {
+      "key": "218822111",
+      "title": "CARE-RAG: Clinically Aligned Risk-Calibrated Evidence-Aware Retrieval-Augmented Generation for Safe Medical Question Answering",
+      "authors": "Prudvi Saisaran Ponduru Prudvi Saisaran Ponduru",
+      "venue": "International Journal of Scientific Research in Engineering and Management",
+      "year": "2026",
+      "doi": "",
+      "page": "orcid-b71d93615b7c.html"
+    },
+    {
+      "key": "218821861",
+      "title": "Decision Intelligence for AI and Emerging Technologies: The AEGIS-DM Framework for Trustworthy, CostAware, and Low-Latency Decision Making",
+      "authors": "Prudvi Saisaran Ponduru",
+      "venue": "Scholarly work",
+      "year": "2026",
+      "doi": "",
+      "page": "orcid-538c80041e6b.html"
+    },
+    {
+      "key": "218821823",
+      "title": "ECHO-DR: An Event-Centric Hierarchical Orchestration Architecture for Scalable AI  Workflows in Real-Time Disaster Response",
+      "authors": "Prudvi Saisaran Ponduru",
+      "venue": "Scholarly work",
+      "year": "2026",
+      "doi": "",
+      "page": "orcid-172f1ab51865.html"
+    },
+    {
+      "key": "227351042",
+      "title": "BATTERY FIREWATER AS AN EMERGING ENVIRONMENTAL HAZARD: EVIDENCE SYNTHESIS AND THE C5 CONTAINMENT\u2013TREATMENT FRAMEWORK FOR LITHIUM-ION BATTERY INCIDENTS",
+      "authors": "Prudvi Saisaran Ponduru, Pavani Priya Vyshnavi Nandanavanam, Sai Kesav Kumar Ponduru",
+      "venue": "World Journal of Advanced Research and Reviews",
+      "year": "2025",
+      "doi": "",
+      "page": "orcid-c30acd120712.html"
+    },
+    {
+      "key": "227351826",
+      "title": "TRUST-ADAPT: Risk-Gated Reversible Test-Time Learning with Conformal Shift Evidence and Selective Memory",
+      "authors": "Prudvi Saisaran Ponduru, Pavani Priya Vyshnavi Nandanavanam, Sai Kesav Kumar Ponduru",
+      "venue": "International Journal of Scientific Research in Computer Science, Engineering and Information Technology",
+      "year": "2025",
+      "doi": "",
+      "page": "orcid-3f2b3f2c12ea.html"
+    },
+    {
+      "key": "227141798",
+      "title": "Ecological Proportionality in Generative AI: The Ethics of Marginal Capability and Environmental Sufficiency",
+      "authors": "Prudvi Saisaran Ponduru, Pavani Priya Vyshnavi Nandanavanam, Sai Kesav Kumar Ponduru",
+      "venue": "Scholarly work",
+      "year": "2026",
+      "doi": "",
+      "page": "orcid-85214360098f.html"
+    }
+  ]
 }
