@@ -31,7 +31,7 @@ jobs:
       - name: Read ORCID and update publications
         run: python scripts/sync_orcid.py
         env:
-          REBUILD_PUBLICATION_LIST: "true"
+          REBUILD_PUBLICATION_LIST: "false"
           ALLOW_ORCID_PDF_DOWNLOAD: "true"
           TRUSTED_PDF_HOSTS: "zenodo.org,hal.science,arxiv.org,osf.io,figshare.com,journal-domain.com"
           ORCID_CLIENT_ID: ${{ secrets.ORCID_CLIENT_ID }}
