@@ -1,6 +1,33 @@
 {
   "works": [
     {
+      "key": "10.5281/zenodo.19968793",
+      "title": "Decision Intelligence for AI and Emerging Technologies: The AEGIS-DM Framework for Trustworthy, CostAware, and Low-Latency Decision Making",
+      "authors": "Prudvi Saisaran Ponduru",
+      "venue": "Scholarly work",
+      "year": "2026",
+      "doi": "10.5281/zenodo.19968793",
+      "page": "orcid-c79ac87d3f7e.html"
+    },
+    {
+      "key": "10.5281/zenodo.19975595",
+      "title": "ECHO-DR: An Event-Centric Hierarchical Orchestration Architecture for Scalable AI  Workflows in Real-Time Disaster Response",
+      "authors": "Prudvi Saisaran Ponduru",
+      "venue": "Scholarly work",
+      "year": "2026",
+      "doi": "10.5281/zenodo.19975595",
+      "page": "orcid-763c6aaf401a.html"
+    },
+    {
+      "key": "10.30574/wjarr.2025.27.3.3148",
+      "title": "TELEOS: VALUE-AWARE ADAPTIVE TELEMETRY FOR PRIVACY-CONSTRAINED AND CAUSALLY USEFUL OBSERVABILITY IN AGENTIC AI SYSTEMS",
+      "authors": "Prudvi Saisaran Ponduru, Pavani Priya Vyshnavi Nandanavanam, Sai Kesav Kumar Ponduru",
+      "venue": "World Journal of Advanced Research and Reviews",
+      "year": "2025",
+      "doi": "10.30574/wjarr.2025.27.3.3148",
+      "page": "orcid-e5b2cc58113d.html"
+    },
+    {
       "key": "227598350",
       "title": "TELEOS: VALUE-AWARE ADAPTIVE TELEMETRY FOR PRIVACY-CONSTRAINED AND CAUSALLY USEFUL OBSERVABILITY IN AGENTIC AI SYSTEMS",
       "authors": "Prudvi Saisaran Ponduru, Pavani Priya Vyshnavi Nandanavanam, Sai Kesav Kumar Ponduru",
