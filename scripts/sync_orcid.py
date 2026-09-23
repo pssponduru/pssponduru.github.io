@@ -210,44 +210,83 @@ def update_home(entries: list[dict]) -> None:
 def main() -> None:
     token = access_token()
     headers = {"Accept": "application/vnd.orcid+json", "Authorization": f"Bearer {token}"}
-    listing = fetch_json(f"https://pub.orcid.org/v3.0/{ORCID_ID}/works", headers)
+    listing = as_dict(fetch_json(f"https://pub.orcid.org/v3.0/{ORCID_ID}/works", headers))
+
     known = existing_identifiers()
-    saved = json.loads(STATE_FILE.read_text(encoding="utf-8")) if STATE_FILE.exists() else {"works": []}
-    saved_ids = {str(x.get("key", "")).lower() for x in saved.get("works", [])}
+    saved_raw = json.loads(STATE_FILE.read_text(encoding="utf-8")) if STATE_FILE.exists() else {"works": []}
+    saved = as_dict(saved_raw)
+    saved["works"] = as_list(saved.get("works"))
+
+    saved_ids = {
+        str(as_dict(item).get("key", "")).lower()
+        for item in saved["works"]
+    }
     new_entries = []
 
-    for group in listing.get("group", []) or []:
-        for summary in group.get("work-summary", []) or []:
+    for group in as_list(listing.get("group")):
+        for summary in as_list(as_dict(group).get("work-summary")):
+            summary = as_dict(summary)
             put_code = str(summary.get("put-code", ""))
             key = doi_from(summary).lower() or put_code.lower()
+
             if not key or key in known or key in saved_ids:
                 continue
-            work = fetch_json(f"https://pub.orcid.org/v3.0/{ORCID_ID}/work/{put_code}", headers)
-            title = value(work.get("title", {}).get("title", {}))
+
+            work = as_dict(
+                fetch_json(f"https://pub.orcid.org/v3.0/{ORCID_ID}/work/{put_code}", headers)
+            )
+
+            title = value(as_dict(work.get("title")).get("title"))
             if not title:
                 print(f"Skipping ORCID put-code {put_code}: no title.")
                 continue
+
             doi = doi_from(work)
             year = year_from(work)
-            venue = value(work.get("journal-title", {})) or value(work.get("source", {})) or "Scholarly work"
+            venue = (
+                value(work.get("journal-title"))
+                or value(work.get("source"))
+                or "Scholarly work"
+            )
             authors = people_from(work)
-            source_url = value(work.get("url", {})) or (f"https://doi.org/{doi}" if doi else f"https://orcid.org/{ORCID_ID}")
-            page_name = "orcid-" + hashlib.sha256((doi or put_code).encode()).hexdigest()[:12] + ".html"
+            source_url = (
+                value(work.get("url"))
+                or (f"https://doi.org/{doi}" if doi else f"https://orcid.org/{ORCID_ID}")
+            )
+
+            page_name = "orcid-" + hashlib.sha256(
+                (doi or put_code).encode()
+            ).hexdigest()[:12] + ".html"
+
             pdf_path = safe_pdf_download(source_url, Path(page_name).stem)
+
             (PUBLICATIONS / page_name).write_text(
-                publication_html(title, authors, venue, year, doi, put_code, source_url, pdf_path),
+                publication_html(
+                    title, authors, venue, year, doi, put_code, source_url, pdf_path
+                ),
                 encoding="utf-8",
             )
+
             update_sitemap(page_name)
-            new_entries.append({"key": key, "title": title, "authors": authors, "venue": venue,
-                                "year": year, "doi": doi, "page": page_name})
+            new_entries.append({
+                "key": key,
+                "title": title,
+                "authors": authors,
+                "venue": venue,
+                "year": year,
+                "doi": doi,
+                "page": page_name,
+            })
             known.add(key)
 
     if new_entries:
         update_home(new_entries)
-        saved["works"] = new_entries + saved.get("works", [])
+        saved["works"] = new_entries + saved["works"]
         STATE_FILE.parent.mkdir(parents=True, exist_ok=True)
-        STATE_FILE.write_text(json.dumps(saved, indent=2) + "\n", encoding="utf-8")
+        STATE_FILE.write_text(
+            json.dumps(saved, indent=2) + "\n",
+            encoding="utf-8",
+        )
         print(f"Added {len(new_entries)} new ORCID work(s).")
     else:
         print("No new public ORCID works found.")
