@@ -191,20 +191,42 @@ def update_sitemap(page_name: str) -> None:
 def update_home(entries: list[dict]) -> None:
     if not entries:
         return
+
     source = INDEX_FILE.read_text(encoding="utf-8")
     cards = []
+
     for item in entries:
         doi = item["doi"]
-        doi_html = (f' <a class="doi" href="https://doi.org/{html.escape(doi)}">DOI: {html.escape(doi)}</a>' if doi else "")
-        cards.append(
-            f'        <li><a class="work-title" href="/publications/{item["page"]}">{html.escape(item["title"])}</a>'
-            f'<p>{html.escape(item["authors"])}. <em>{html.escape(item["venue"])}</em>, {item["year"]}.{doi_html}</p></li>'
+        doi_html = (
+            f'<a class="doi" href="https://doi.org/{html.escape(doi)}">'
+            f'DOI {html.escape(doi)}</a>'
+            if doi else ""
         )
-    block = "<!-- ORCID_SYNC_START -->\n      <div class=\"orcid-sync\"><h3>Newly synchronized works</h3><ol class=\"works\">\n" + "\n".join(cards) + "\n      </ol></div>\n      <!-- ORCID_SYNC_END -->"
-    pattern = r"<!-- ORCID_SYNC_START -->.*?<!-- ORCID_SYNC_END -->"
-    if not re.search(pattern, source, flags=re.S):
-        raise RuntimeError("The ORCID sync markers are missing from index.html.")
-    INDEX_FILE.write_text(re.sub(pattern, block, source, flags=re.S), encoding="utf-8")
+
+        cards.append(
+            f'<li><span class="work-num">NEW</span><div>'
+            f'<a class="work-title" href="publications/{item["page"]}">'
+            f'{html.escape(item["title"])}</a>{doi_html}</div></li>'
+        )
+
+    pattern = r'(<ol class="works">)'
+    if not re.search(pattern, source):
+        raise RuntimeError("The main publication list is missing from index.html.")
+
+    source = re.sub(
+        pattern,
+        r'\1\n' + "\n".join(cards),
+        source,
+        count=1,
+    )
+
+    count_pattern = r'(<strong>)(\d+)(</strong><span>Research publications</span>)'
+
+    def update_count(match: re.Match) -> str:
+        return match.group(1) + str(int(match.group(2)) + len(entries)) + match.group(3)
+
+    source = re.sub(count_pattern, update_count, source, count=1)
+    INDEX_FILE.write_text(source, encoding="utf-8")
 
 
 def main() -> None:
