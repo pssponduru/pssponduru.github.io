@@ -1,0 +1,48 @@
+name: Sync new ORCID works
+
+on:
+  workflow_dispatch:
+  schedule:
+    - cron: "17 08 * * *"
+
+permissions:
+  contents: write
+
+concurrency:
+  group: orcid-publication-sync
+  cancel-in-progress: false
+
+jobs:
+  sync:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Get website files
+        uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+
+      - name: Install required package
+        run: pip install requests
+
+      - name: Read ORCID and update publications
+        run: python scripts/sync_orcid.py
+        env:
+          ORCID_CLIENT_ID: ${{ secrets.ORCID_CLIENT_ID }}
+          ORCID_CLIENT_SECRET: ${{ secrets.ORCID_CLIENT_SECRET }}
+          ORCID_ID: "0009-0009-5930-8265"
+
+      - name: Save website updates
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add index.html sitemap.xml publications data
+          if git diff --cached --quiet; then
+            echo "No new ORCID works found."
+          else
+            git commit -m "Sync new ORCID publications"
+            git push
+          fi
