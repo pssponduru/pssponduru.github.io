@@ -62,8 +62,11 @@ def access_token() -> str:
 
 def value(node: object) -> str:
     if isinstance(node, dict):
-        raw = node.get("value", "")
-        return str(raw).strip() if raw else ""
+        node = node.get("value", "")
+
+    if isinstance(node, (str, int, float)):
+        return str(node).strip()
+
     return ""
 
 
@@ -103,10 +106,26 @@ def people_from(work: dict) -> str:
 
 def existing_identifiers() -> set[str]:
     found: set[str] = set()
+
+    sources = [INDEX_FILE.read_text(encoding="utf-8", errors="ignore")]
+
     for page in PUBLICATIONS.glob("*.html"):
-        source = page.read_text(encoding="utf-8", errors="ignore")
-        for match in re.findall(r'<meta name="citation_(?:doi|orcid_put_code)" content="([^"]+)"', source):
+        sources.append(page.read_text(encoding="utf-8", errors="ignore"))
+
+    for source in sources:
+        for match in re.findall(
+            r'<meta name="citation_(?:doi|orcid_put_code)" content="([^"]+)"',
+            source,
+        ):
             found.add(html.unescape(match).strip().lower())
+
+        for match in re.findall(
+            r'https?://doi\.org/([^"\'<\s]+)',
+            source,
+            flags=re.I,
+        ):
+            found.add(html.unescape(match).strip().lower().rstrip(".,;)"))
+
     return found
 
 
