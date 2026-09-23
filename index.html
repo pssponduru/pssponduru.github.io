@@ -19,20 +19,21 @@
 section{padding:58px 0}.section-label{color:var(--blue);font-size:.72rem;letter-spacing:.13em;text-transform:uppercase;font-weight:800}.section-title{font-family:"DM Serif Display",Georgia,serif;font-weight:400;font-size:clamp(2rem,3.5vw,3.1rem);line-height:1.05;letter-spacing:-.04em;margin:8px 0 14px}.intro-grid{display:grid;grid-template-columns:1fr 1fr;gap:48px;align-items:start}.intro-copy{font-size:1rem;color:#36475c}.intro-copy p{margin:0 0 14px}.intro-copy p:last-child{margin-bottom:0}.themes{display:grid;gap:12px}.theme{padding:18px 20px;background:#fff;border-left:3px solid var(--blue);box-shadow:0 8px 24px rgba(24,48,76,.06)}.theme b{display:block;margin-bottom:3px}.theme span{font-size:.9rem;color:var(--muted)}
 .research{background:#eaf1f8}.works{padding-top:10px;list-style:none;margin:0;padding-left:0;border-top:1px solid #cbd6e1}.works li{display:grid;grid-template-columns:55px 1fr;gap:16px;padding:21px 0;border-bottom:1px solid #cbd6e1}.works p{margin:7px 0 0;color:#36475c;font-size:.93rem;line-height:1.7}.work-num{font-size:.75rem;color:#718196;font-weight:800;padding-top:5px}.work-title{display:block;color:var(--ink);font-weight:800;text-decoration:none;line-height:1.35}.work-title:hover{color:var(--blue)}.doi{display:inline-block;color:var(--blue);font-size:.77rem;font-weight:800;margin-top:6px;text-decoration:none}.doi:hover{text-decoration:underline}
 .author-section{padding:38px 0 44px;background:#fff}.author-card{max-width:none;padding:22px 26px;background:#eef5fb;border-left:4px solid var(--blue);box-shadow:none}.author-kicker{color:var(--blue);font-size:.72rem;letter-spacing:.12em;font-weight:900;margin-bottom:6px}.author-card h3{font-family:Manrope,Arial,sans-serif;font-size:1.12rem;line-height:1.4;font-weight:800;margin:0 0 8px;color:var(--ink)}.author-card p{max-width:none;color:#36475c;font-size:.9rem;line-height:1.6;margin:0 0 12px}.author-card .button{padding:9px 13px;font-size:.78rem}.author-card .button.primary{background:var(--blue);color:#fff}
+.theme-toggle{margin-left:16px;padding:6px 9px;border:1px solid rgba(255,255,255,.35);border-radius:999px;background:transparent;color:#e6edf7;font:inherit;font-size:.76rem;font-weight:800;cursor:pointer}.theme-toggle:hover{color:var(--mint);border-color:var(--mint)}.theme-toggle span:first-child{font-size:1rem;margin-right:4px}body[data-theme="dark"]{--ink:#edf5ff;--muted:#b2c5d9;--line:#29445f;--paper:#091625;--blue:#82b4ff;--mint:#70e2ad}body[data-theme="dark"] .research{background:#0b1b2c}body[data-theme="dark"] .metrics,body[data-theme="dark"] .author-section,body[data-theme="dark"] .theme{background:#0f2134}body[data-theme="dark"] .author-card{background:#122b45}body[data-theme="dark"] .intro-copy,body[data-theme="dark"] .works p,body[data-theme="dark"] .author-card p{color:var(--muted)}body[data-theme="dark"] .portrait-note{background:#dceafa;color:#11253c}
 .footer{background:#061323;color:#d4e2ee;padding:42px 0;font-size:.88rem}.footer .shell{display:flex;justify-content:space-between;gap:20px}.footer a{color:#a8e9ff;text-decoration:none}
-@media(max-width:760px){.shell{width:min(100% - 32px,1150px)}.hero{padding:20px 0 42px}.nav{align-items:flex-start;gap:12px;font-size:.8rem}.nav>div:last-child{display:flex;flex-wrap:wrap;justify-content:flex-end;gap:2px}.nav a{margin-left:8px;font-size:.76rem}.hero-grid,.intro-grid{grid-template-columns:1fr;gap:30px}.hero-grid{padding-top:40px}.hero h1{font-size:clamp(2.75rem,12vw,4rem);margin:12px 0 16px}.lead{font-size:.98rem;margin-bottom:20px}.portrait-wrap{justify-self:center;width:min(270px,88%)}.portrait-note{left:-10px;bottom:-17px}.metrics{grid-template-columns:1fr;margin-top:0;border-radius:0}.metric{padding:17px 20px;border-right:0;border-bottom:1px solid var(--line)}.metric:last-child{border-bottom:0}.metric strong{font-size:1.45rem}section{padding:44px 0}.section-title{font-size:2.2rem;margin-bottom:12px}.intro-copy{font-size:.96rem}.author-section{padding:32px 0}.author-card{padding:18px}.author-card h3{font-size:1rem;line-height:1.38}.author-card p{font-size:.88rem}.works li{grid-template-columns:38px 1fr;gap:12px;padding:17px 0}.works p{font-size:.86rem;line-height:1.6}.work-title{font-size:1rem}.footer{padding:30px 0}.footer .shell{display:block}.footer p{margin:4px 0}}
+@media(max-width:760px){.shell{width:min(100% - 32px,1150px)}.hero{padding:20px 0 42px}.nav{align-items:flex-start;gap:12px;font-size:.8rem}.nav>div:last-child{display:flex;flex-wrap:wrap;justify-content:flex-end;gap:2px}.nav a{margin-left:8px;font-size:.76rem}.theme-toggle{margin-left:8px;padding:5px 8px}.theme-toggle span:first-child{margin:0}#theme-label{display:none}.hero-grid,.intro-grid{grid-template-columns:1fr;gap:30px}.hero-grid{padding-top:40px}.hero h1{font-size:clamp(2.75rem,12vw,4rem);margin:12px 0 16px}.lead{font-size:.98rem;margin-bottom:20px}.portrait-wrap{justify-self:center;width:min(270px,88%)}.portrait-note{left:-10px;bottom:-17px}.metrics{grid-template-columns:1fr;margin-top:0;border-radius:0}.metric{padding:17px 20px;border-right:0;border-bottom:1px solid var(--line)}.metric:last-child{border-bottom:0}.metric strong{font-size:1.45rem}section{padding:44px 0}.section-title{font-size:2.2rem;margin-bottom:12px}.intro-copy{font-size:.96rem}.author-section{padding:32px 0}.author-card{padding:18px}.author-card h3{font-size:1rem;line-height:1.38}.author-card p{font-size:.88rem}.works li{grid-template-columns:38px 1fr;gap:12px;padding:17px 0}.works p{font-size:.86rem;line-height:1.6}.work-title{font-size:1rem}.footer{padding:30px 0}.footer .shell{display:block}.footer p{margin:4px 0}}
 </style>
 </head>
 <body>
 <header class="hero">
-  <div class="shell nav"><div class="brand">Prudvi Saisaran Ponduru</div><div><a href="#author">Author</a><a href="#research">Research</a><a href="https://orcid.org/0009-0009-5930-8265">ORCID</a><a href="https://scholar.google.com/citations?user=ml4JghYAAAAJ&amp;hl=en">Scholar</a></div></div>
+  <div class="shell nav"><div class="brand">Prudvi Saisaran Ponduru</div><div><a href="#author">Author</a><a href="#research">Research</a><a href="https://orcid.org/0009-0009-5930-8265">ORCID</a><a href="https://scholar.google.com/citations?user=ml4JghYAAAAJ&amp;hl=en">Scholar</a><button class="theme-toggle" id="theme-toggle" type="button" aria-label="Change colour theme" aria-pressed="false"><span id="theme-icon" aria-hidden="true">☾</span><span id="theme-label">Theme</span></button></div></div>
   <div class="shell hero-grid">
   <div>
   <div class="eyebrow">AI • Cloud • Production Systems</div>
   <h1>Building AI systems<br>that can <em>be trusted.</em></h1>
 
   <p class="lead">
-    Researcher and cloud/AI platform engineer with hands-on enterprise experience.
+    Researcher and Cloud/AI platform engineer with hands-on enterprise experience.
     I work on agentic AI, distributed systems, and cloud reliability, with a focus
     on making production systems safe, observable, and dependable.
   </p>
@@ -48,7 +49,7 @@ section{padding:58px 0}.section-label{color:var(--blue);font-size:.72rem;letter-
 <div class="portrait-wrap">
   <img class="portrait" src="assets/profile-photo.png" alt="Prudvi Saisaran Ponduru">
   <div class="portrait-note">
-    Researcher &amp; AI Platform Engineer
+    Researcher &amp; Enterprise AI Platform Engineer
     <span>Enterprise technology + research</span>
   </div>
 </div>
@@ -94,7 +95,7 @@ section{padding:58px 0}.section-label{color:var(--blue);font-size:.72rem;letter-
   </div>
 </section>
 <section class="author-section" id="author"><div class="shell"><div class="section-label">Technical authorship</div><article class="author-card"><div class="author-kicker">AUTHOR</div><h3>Agentic AI in Production: Build, Evaluate, Secure, and Operate Reliable Autonomous Systems</h3><p>A published technical book focused on production-grade agentic AI, including autonomous and semi-autonomous agents, evaluation, orchestration, reliability, observability, security, and deployment patterns.</p><a class="button primary" href="https://amazon.com/dp/B0HJ7378P8" target="_blank" rel="noopener">View on Amazon ↗</a></article></div></section>
-<section class="research" id="research"><div class="shell"><div class="section-label">Research portfolio</div><h2 class="section-title">Publications</h2><p class="intro-copy">Every paper has a dedicated page, a permanent DOI link, and direct access to its full text where available.</p><ol class="works">
+<section class="research" id="research"><div class="shell"><div class="section-label">Research portfolio</div><h2 class="section-title">Publications</h2><ol class="works">
 <li><span class="work-num">01</span><div><a class="work-title" href="publications/estimating-avoidable-harm.html">Estimating Avoidable Harm for Test-Time Compute Allocation in Long-Horizon Tool-Using Language Agents: A Controlled Computational Study and External Validation Protocol</a><p>Ponduru, P. S., Vyshnavi Nandanavanam, P. P., &amp; Kumar Ponduru, S. K. (2026). Estimating Avoidable Harm for Test-Time Compute Allocation in Long-Horizon Tool-Using Language Agents: A Controlled Computational Study and External Validation Protocol. <em>Engineering and Technology Journal</em> <em>11</em>(09). <a class="doi" href="https://doi.org/10.47191/etj/v11i09.05">https://doi.org/10.47191/etj/v11i09.05 </a></p><a class="doi" href="/pdfs/estimating-avoidable-harm.pdf">Full text PDF</a></div></li>
 <li><span class="work-num">02</span><div><a class="work-title" href="publications/racer.html">RACER: Remediation Assurance Contracts for Evidence-Gated, Risk-Bounded Autonomous Recovery in Cloud Systems</a><p>Ponduru, P. S., Vyshnavi Nandanavanam, P. P., &amp; Kumar Ponduru, S. K. (2026). RACER: Remediation Assurance Contracts for Evidence-Gated, Risk-Bounded Autonomous Recovery in Cloud Systems. <em>International Journal of Advanced Multidisciplinary Research and Studies</em> <em>6</em>(5), 111-120. <a class="doi" href="https://doi.org/10.62225/2583049x.2026.6.5.6834">https://doi.org/10.62225/2583049x.2026.6.5.6834 </a></p><a class="doi" href="/pdfs/racer.pdf">Full text PDF</a></div></li>
 <li><span class="work-num">03</span><div><a class="work-title" href="publications/ai-safe-flightnet.html">AI-SAFE FlightNet : A Next-Generation Artificial Intelligence and Automation Framework for Predictive Flight Safety, Aircraft Health Intelligence, and Ground Operations Coordination</a><p>Ponduru, P. S., Nandanavanam, P. P. V., &amp; Ponduru, S. K. K. (2026). AI-SAFE FlightNet : A Next-Generation Artificial Intelligence and Automation Framework for Predictive Flight Safety, Aircraft Health Intelligence, and Ground Operations Coordination. <em>Engineering and Technology Journal</em> <em>11</em>(08). <a class="doi" href="https://doi.org/10.47191/etj/v11i08.05">https://doi.org/10.47191/etj/v11i08.05 </a></p><a class="doi" href="/pdfs/ai-safe-flightnet.pdf">Full text PDF</a></div></li>
@@ -113,5 +114,21 @@ section{padding:58px 0}.section-label{color:var(--blue);font-size:.72rem;letter-
 <li><span class="work-num">16</span><div><a class="work-title" href="publications/orcid-e5b2cc58113d.html">TELEOS: VALUE-AWARE ADAPTIVE TELEMETRY FOR PRIVACY-CONSTRAINED AND CAUSALLY USEFUL OBSERVABILITY IN AGENTIC AI SYSTEMS</a><p>Ponduru, P. S., Nandanavanam, P. P. V., &amp; Ponduru, S. K. K. (2025). TELEOS: VALUE-AWARE ADAPTIVE TELEMETRY FOR PRIVACY-CONSTRAINED AND CAUSALLY USEFUL OBSERVABILITY IN AGENTIC AI SYSTEMS. <em>World Journal of Advanced Research and Reviews</em> <em>27</em>(3), 2043-2058. <a class="doi" href="https://doi.org/10.30574/wjarr.2025.27.3.3148">https://doi.org/10.30574/wjarr.2025.27.3.3148 </a></p></div></li></ol></div></section>
 
 <footer class="footer"><div class="shell"><p>© 2026 Prudvi Saisaran Ponduru</p><p><a href="https://orcid.org/0009-0009-5930-8265">ORCID</a> · <a href="https://scholar.google.com/citations?user=ml4JghYAAAAJ&amp;hl=en">Google Scholar</a></p></div></footer>
+<script>
+(() => {
+  const button = document.getElementById("theme-toggle");
+  const icon = document.getElementById("theme-icon");
+  const savedTheme = localStorage.getItem("theme");
+  const systemTheme = window.matchMedia("(prefers-color-scheme: dark)").matches ? "dark" : "light";
+  function setTheme(theme) {
+    document.body.dataset.theme = theme;
+    localStorage.setItem("theme", theme);
+    button.setAttribute("aria-pressed", theme === "dark");
+    icon.textContent = theme === "dark" ? "☼" : "☾";
+  }
+  setTheme(savedTheme || systemTheme);
+  button.addEventListener("click", () => setTheme(document.body.dataset.theme === "dark" ? "light" : "dark"));
+})();
+</script>
 </body>
 </html>
