@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://pssponduru.github.io/sitemap.xml
