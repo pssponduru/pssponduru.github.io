@@ -67,24 +67,37 @@ def value(node: object) -> str:
     return ""
 
 
+def as_dict(item: object) -> dict:
+    return item if isinstance(item, dict) else {}
+
+
+def as_list(item: object) -> list:
+    return item if isinstance(item, list) else []
+
+
 def doi_from(work: dict) -> str:
-    ids = work.get("external-ids", {}).get("external-id", []) or []
+    ids = as_list(as_dict(as_dict(work).get("external-ids")).get("external-id"))
     for item in ids:
+        item = as_dict(item)
         if str(item.get("external-id-type", "")).lower() == "doi":
-            return value(item.get("external-id-value", {})).removeprefix("https://doi.org/").strip()
+            return value(item.get("external-id-value")).removeprefix("https://doi.org/").strip()
     return ""
 
 
 def year_from(work: dict) -> str:
-    return value(work.get("publication-date", {}).get("year", {})) or str(date.today().year)
+    publication_date = as_dict(as_dict(work).get("publication-date"))
+    return value(publication_date.get("year")) or str(date.today().year)
 
 
 def people_from(work: dict) -> str:
+    contributors = as_list(as_dict(as_dict(work).get("contributors")).get("contributor"))
     names = []
-    for item in work.get("contributors", {}).get("contributor", []) or []:
-        name = value(item.get("credit-name", {}))
+
+    for item in contributors:
+        name = value(as_dict(item).get("credit-name"))
         if name and name not in names:
             names.append(name)
+
     return ", ".join(names) or AUTHOR_NAME
 
 
