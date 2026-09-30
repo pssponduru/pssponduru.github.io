@@ -37,7 +37,7 @@ jobs:
           # ORCID_CLIENT_ID: ${{ secrets.ORCID_CLIENT_ID }}
           # ORCID_CLIENT_SECRET: ${{ secrets.ORCID_CLIENT_SECRET }}
           # ORCID_ID: "0009-0009-5930-8265"
-          REBUILD_PUBLICATION_LIST: "true"
+          REBUILD_PUBLICATION_LIST: "false"
           ALLOW_ORCID_PDF_DOWNLOAD: "false"
           ORCID_ONLY: "true"
           PRUNE_NON_ORCID_CONTENT: "true"
