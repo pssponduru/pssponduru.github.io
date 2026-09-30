@@ -334,7 +334,7 @@ def update_home(entries: list[dict]) -> None:
         return f'<span class="work-num">{counter:02d}</span>'
     combined = re.sub(r'<span class="work-num">.*?</span>', number, combined)
     source = source[:match.start()] + match.group(1) + combined + match.group(3) + source[match.end():]
-    source = re.sub(r'(<strong>)\d+(</strong><span>Research publications</span>)', rf'\g<1>{counter}\g<2>', source, count=1)
+    source = re.sub(r'(<strong>\s*)\d+(\s*</strong>\s*<span>\s*Research publications\s*</span>)', rf'\g<1>{counter}\g<2>', source, count=1)
     INDEX_FILE.write_text(source, encoding="utf-8")
 
 
@@ -428,7 +428,7 @@ def rebuild_publication_list() -> None:
         )
     source = INDEX_FILE.read_text(encoding="utf-8")
     source = re.sub(r'(<ol class="works">).*?(</ol>)', r'\1' + "\n" + "\n".join(cards) + r'\2', source, count=1, flags=re.S)
-    source = re.sub(r'(<strong>)\d+(</strong><span>Research publications</span>)', rf'\g<1>{len(items)}\g<2>', source, count=1)
+    source = re.sub(r'(<strong>\s*)\d+(\s*</strong>\s*<span>\s*Research publications\s*</span>)', rf'\g<1>{len(items)}\g<2>', source, count=1)
     INDEX_FILE.write_text(source, encoding="utf-8")
     for page in duplicate_pages:
         path = ROOT / page.lstrip("/")
@@ -552,7 +552,7 @@ def write_orcid_only_home(items: list[dict]) -> None:
         flags=re.S,
     )
     source = re.sub(
-        r'(<strong>)\d+(</strong><span>Research publications</span>)',
+        r'(<strong>\s*)\d+(\s*</strong>\s*<span>\s*Research publications\s*</span>)',
         rf'\g<1>{len(items)}\g<2>',
         source,
         count=1,
