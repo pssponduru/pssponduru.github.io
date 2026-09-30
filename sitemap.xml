@@ -1,24 +1,56 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url><loc>https://pssponduru.github.io/</loc><lastmod>2026-09-23</lastmod></url>
-  <url><loc>https://pssponduru.github.io/publications/estimating-avoidable-harm.html</loc><lastmod>2026-09-23</lastmod></url>
-  <url><loc>https://pssponduru.github.io/publications/racer.html</loc><lastmod>2026-09-23</lastmod></url>
-  <url><loc>https://pssponduru.github.io/publications/ai-safe-flightnet.html</loc><lastmod>2026-09-23</lastmod></url>
-  <url><loc>https://pssponduru.github.io/publications/openreliops.html</loc><lastmod>2026-09-23</lastmod></url>
-  <url><loc>https://pssponduru.github.io/publications/safe-healcloud.html</loc><lastmod>2026-09-23</lastmod></url>
-  <url><loc>https://pssponduru.github.io/publications/self-evolving-self-healing-agents.html</loc><lastmod>2026-09-23</lastmod></url>
-  <url><loc>https://pssponduru.github.io/publications/matter-ai.html</loc><lastmod>2026-09-23</lastmod></url>
-  <url><loc>https://pssponduru.github.io/publications/adapt-iot.html</loc><lastmod>2026-09-23</lastmod></url>
-  <url><loc>https://pssponduru.github.io/publications/agentmesh-mcp.html</loc><lastmod>2026-09-23</lastmod></url>
-  <url><loc>https://pssponduru.github.io/publications/care-rag.html</loc><lastmod>2026-09-23</lastmod></url>
-  <url><loc>https://pssponduru.github.io/publications/battery-firewater.html</loc><lastmod>2026-09-23</lastmod></url>
-  <url><loc>https://pssponduru.github.io/publications/trust-adapt.html</loc><lastmod>2026-09-23</lastmod></url>
-  <url><loc>https://pssponduru.github.io/publications/ecological-proportionality.html</loc><lastmod>2026-09-23</lastmod></url>
-  <url><loc>https://pssponduru.github.io/publications/aegis-dm.html</loc><lastmod>2026-09-23</lastmod></url>
-  <url><loc>https://pssponduru.github.io/publications/echo-dr.html</loc><lastmod>2026-09-23</lastmod></url>
-  <url><loc>https://pssponduru.github.io/publications/orcid-e5b2cc58113d.html</loc><lastmod>2026-09-23</lastmod></url>
+  <url>
+    <loc>https://pssponduru.github.io/publications/orcid-3c7fdfce1a69.html</loc>
+    <lastmod>2026-09-30</lastmod>
+  </url>
+  <url>
+    <loc>https://pssponduru.github.io/publications/orcid-8495c4d520f0.html</loc>
+    <lastmod>2026-09-30</lastmod>
+  </url>
+  <url>
+    <loc>https://pssponduru.github.io/publications/orcid-bee39ae55eb4.html</loc>
+    <lastmod>2026-09-30</lastmod>
+  </url>
+  <url>
+    <loc>https://pssponduru.github.io/publications/orcid-d693deba6077.html</loc>
+    <lastmod>2026-09-30</lastmod>
+  </url>
+  <url>
+    <loc>https://pssponduru.github.io/publications/orcid-9e5ba578f4b8.html</loc>
+    <lastmod>2026-09-30</lastmod>
+  </url>
+  <url>
+    <loc>https://pssponduru.github.io/publications/orcid-8d19e5e9563f.html</loc>
+    <lastmod>2026-09-30</lastmod>
+  </url>
+  <url>
+    <loc>https://pssponduru.github.io/publications/orcid-c79ac87d3f7e.html</loc>
+    <lastmod>2026-09-30</lastmod>
+  </url>
+  <url>
+    <loc>https://pssponduru.github.io/publications/orcid-de177bb9c7d8.html</loc>
+    <lastmod>2026-09-30</lastmod>
+  </url>
+  <url>
+    <loc>https://pssponduru.github.io/publications/orcid-e5b2cc58113d.html</loc>
+    <lastmod>2026-09-30</lastmod>
+  </url>
+  <url>
+    <loc>https://pssponduru.github.io/publications/orcid-df9284a7e08e.html</loc>
+    <lastmod>2026-09-30</lastmod>
+  </url>
   <url>
     <loc>https://pssponduru.github.io/publications/orcid-32a16eb12b98.html</loc>
+    <lastmod>2026-09-30</lastmod>
+  </url>
+  <url>
+    <loc>https://pssponduru.github.io/publications/orcid-072529013946.html</loc>
+    <lastmod>2026-09-30</lastmod>
+  </url>
+  <url>
+    <loc>https://pssponduru.github.io/publications/orcid-673611267b8d.html</loc>
     <lastmod>2026-09-30</lastmod>
   </url>
 </urlset>
